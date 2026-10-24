@@ -1,24 +1,5 @@
 # MINT
 
-The complete existing Fast Search campaign, packaged for reading, sharing, and
-running on a configured Linux GPU machine. It proposes protein sequences with
-ProteinMPNN, scores their 9/10/11-mer peptides with NetMHCpan, folds shortlisted
-sequences with AF3, and uses passing folds as parents for subsequent rounds.
-
-**The 2026-10-18 revision uses the eight-threshold cumulative score and joint
-MPNN temperature 0.4.** Scoring was ported from the active weighted Digs campaign;
-the fixed joint temperature is the user-requested local revision. The original
-90 pLDDT / 2 Å root-reference fold gates, model weights, native kernel, and AF3
-adapters are unchanged. See [revision evidence](docs/SCORING_REVISION.json).
-
-The 2026-10-23 local revision also orders allele batches by each allele's
-contribution to the selected objective, using the eight-threshold sum in
-weighted8 mode. Previously, this processing order used only the <2% count.
-
-This folder is independent of the CPU-only Mac app in its parent directory.
-That app and its runs remain separate. Its pending folding queues are not
-imported here; prepare a new run for this full campaign.
-
 ## What is included
 
 - Fast Search, exact rank cache, original optional AVX2 scoring accelerator,
