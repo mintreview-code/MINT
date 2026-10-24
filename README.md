@@ -1,8 +1,10 @@
-# MINT
+# MINT: MHC-I Immunogenicity Tuning
+
+MINT (MHC-I Immunogenicity Tuning) is a computational framework for redesigning protein sequences with reduced or enhanced predicted MHC class 1 (MHC-I) epitope presentation. MINT integrates ProteinMPNN sequence design with NetMHCpan 4.1 epitope prediction to optimize protein immunogenicity across multiple MHC-I alleles. Its iterative optimization strategy combines targeted mutation, sequence diversity preservation, structure prediction, and cached peptide–allele predictions to efficiently explore sequence space. The framework supports both single-pass design and iterative optimization across large allele panels.
 
 ## What is included
 
-- Fast Search, exact rank cache, original optional AVX2 scoring accelerator,
+- Fast Search, exact rank cache,
   ProteinMPNN implementation and checkpoint, and the 25-allele panel.
 - AF3 request adapter, persistent GPU worker, model runner, output writer, and
   the compatible image's build recipe. The exact external engine revision and
