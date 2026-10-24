@@ -1,4 +1,4 @@
-# Fast Search + AlphaFold 3
+# MINT
 
 The complete existing Fast Search campaign, packaged for reading, sharing, and
 running on a configured Linux GPU machine. It proposes protein sequences with
