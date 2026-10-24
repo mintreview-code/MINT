@@ -1,0 +1,284 @@
+{
+  "package": "FastSearchAF3",
+  "packaging_date": "2026-10-14",
+  "reference": {
+    "host": "digs.ipd.uw.edu",
+    "path": "/home/mwitwer/projects/MHC_project/peptide_scan_investigation/lf_pool120_plan_20261007/package",
+    "copied_without": [
+      "historical runs",
+      "caches",
+      "environments",
+      "licensed installations",
+      "container images"
+    ]
+  },
+  "algorithm_changes": false,
+  "original_runtime_ast_identical": true,
+  "original_runtime_files": [
+    "archive_results.py",
+    "core.py",
+    "geometry.py",
+    "lf.py",
+    "mapper.py",
+    "models.py",
+    "mpnn_helpers.py",
+    "run120.py",
+    "search.py",
+    "vendor/__init__.py",
+    "vendor/af3/af3_apptainer.py",
+    "vendor/af3/af3_daemon.py",
+    "vendor/af3/af3_runtime.py",
+    "vendor/af3/run_alphafold_batch.py",
+    "vendor/mpnn/__init__.py",
+    "vendor/mpnn/data_utils.py",
+    "vendor/mpnn/model_utils.py"
+  ],
+  "algorithm_preservation_note": "AST identity verifies unchanged Python statements/expressions, including names, constants, control flow and call structure; it is not a claim of identical stochastic results across changed hardware or dependency versions.",
+  "original_assets_and_vendor_bytes_identical": true,
+  "changes": [
+    "Formatting and explanatory comments in eight project modules; formatting only in lf.py.",
+    "Replaced quote/spacing-sensitive test assertions with equivalent AST checks.",
+    "Added prepare.py as a single-run wrapper for original campaign and smoke settings; helper defaults are tested. No cohort scheduler, personal paths, or automatic scratch deletion.",
+    "Added local Gradio controls for same preparation, Slurm preview/submission, and status records. No new search or folding implementation.",
+    "Included exact inspected compatible AF3 image build recipe, engine revision and setup instructions. Upstream engine source remains external per user preference.",
+    "Added setup/workflow/testing documentation, portable site examples, and allowlisted source archive tool."
+  ],
+  "campaign_setup_reference": {
+    "bundled_path": "docs/reference/campaign_prepare.upstream.txt",
+    "source": "/home/mwitwer/projects/MHC_project/peptide_scan_investigation/lf_pool120_plan_20261007/prepare.py",
+    "sha256": "5db59705fae1f66941e003e97c8a13db6d8c4b1daac5c93357e01b39d9053c17"
+  },
+  "engine_source": {
+    "repository": "https://github.com/kierandidi/alphafold3",
+    "commit": "8d3601151d5bf7525d8591583915d2a8471442a5",
+    "included": false,
+    "source_reviewed_to_verify_compatibility": true,
+    "provenance": "runtime/af3/PROVENANCE.json"
+  },
+  "validation": {
+    "date": "2026-10-14",
+    "unit_tests": 43,
+    "passed": 43,
+    "seconds": 4.086,
+    "python_syntax": "all included Python files parsed",
+    "shell_syntax": "bash -n job.sh native/build.sh passed",
+    "gradio_app_construction": "30 components built successfully with installed Gradio 6.30.0",
+    "gpu_inference_run": false,
+    "real_netmhcpan_run": false,
+    "container_rebuilt": false,
+    "notes": "Existing local environment lacks matplotlib; unit tests do not perform final plotting. External AF3 engine tests were not executed.",
+    "gradio_browser_check": "Started locally, verified rendered preparation controls and defaults in browser, then stopped QA server. No job submitted."
+  },
+  "upstream_files": {
+    "README.md": {
+      "upstream_sha256": "958b0b10a644a90337d519a7ff4fbc4892b1fb5480c63828d63ed5ea7c0c62a1",
+      "packaged_sha256": "5063300d4faebe1933f9d89658bfc7d853ca8337be0074ebec78d51c8ee04832",
+      "byte_identical": false
+    },
+    "SOURCE_PROVENANCE.json": {
+      "upstream_sha256": "2b4738850da9964ad812a861ed19db5c4550b3f4a0dedd4c602d10a76e80174f",
+      "packaged_sha256": "2b4738850da9964ad812a861ed19db5c4550b3f4a0dedd4c602d10a76e80174f",
+      "byte_identical": true
+    },
+    "THIRD_PARTY_NOTICES.txt": {
+      "upstream_sha256": "c66f70c21f9f525926d7e7d7ff88c86c1b2375f663b5222653d6e8790b2447c5",
+      "packaged_sha256": "29b3ecc2f51f1dde2a48cf8a01a959fbeb7f3f2def5ea71e81cea9d0101278a1",
+      "byte_identical": false
+    },
+    "VALIDATION.json": {
+      "upstream_sha256": "cfe13eea3044c064264ebab3a01da3e99917d18aba2d2e03f943796f5fd845f3",
+      "packaged_sha256": "cfe13eea3044c064264ebab3a01da3e99917d18aba2d2e03f943796f5fd845f3",
+      "byte_identical": true
+    },
+    "archive_results.py": {
+      "upstream_sha256": "0c17a4a5eaa7c09a40fde9e252c44a4b111224e9272d76061df1638b2fc59978",
+      "packaged_sha256": "3e5228fb9dbf636cb9efc47fba62a88e1a486a72cbfd2f11c81677af73b430cb",
+      "byte_identical": false,
+      "ast_identical": true
+    },
+    "assets/alleles25.json": {
+      "upstream_sha256": "cc63ba1b5419619f326de6ab412b376f9ed66850fa5b0fa581f5e3321b1b53bf",
+      "packaged_sha256": "cc63ba1b5419619f326de6ab412b376f9ed66850fa5b0fa581f5e3321b1b53bf",
+      "byte_identical": true
+    },
+    "assets/protein_mpnn.pt": {
+      "upstream_sha256": "c9cb4a671d79604111231f8dbfc7c590e06f1197453b7a6854ac6661a642f5bd",
+      "packaged_sha256": "c9cb4a671d79604111231f8dbfc7c590e06f1197453b7a6854ac6661a642f5bd",
+      "byte_identical": true
+    },
+    "core.py": {
+      "upstream_sha256": "76660972d7360061f3f9e23053040fcb2e4a2119fce6f90dd160a52ce8b46d8c",
+      "packaged_sha256": "b67aa03f8b35774f26b2fab2512537fa3cb5fe4668fd3207fb89beceea1e95c5",
+      "byte_identical": false,
+      "ast_identical": true
+    },
+    "examples/luxsit_fixed.txt": {
+      "upstream_sha256": "c5b4bf28e76a570514394ce2cc63a18b88a3cdeef5dcc970ec366f0176d07df7",
+      "packaged_sha256": "c5b4bf28e76a570514394ce2cc63a18b88a3cdeef5dcc970ec366f0176d07df7",
+      "byte_identical": true
+    },
+    "examples/luxsit_seed.pdb": {
+      "upstream_sha256": "a7353b506bbb8402517468d298734cfa8c8b93d389fb6321161e5d15dd026bdf",
+      "packaged_sha256": "a7353b506bbb8402517468d298734cfa8c8b93d389fb6321161e5d15dd026bdf",
+      "byte_identical": true
+    },
+    "geometry.py": {
+      "upstream_sha256": "a8a6f235bddca31b2a90dfc488b6b2bd71ba4deed9eb0881666df95a011c51bc",
+      "packaged_sha256": "00b833ff85cfbd2264b499c16b466b8ebf767e36ebe6ed51e8ec9463264792bc",
+      "byte_identical": false,
+      "ast_identical": true
+    },
+    "job.sh": {
+      "upstream_sha256": "80f9d65bcf4743d6bc4f18f3fd304fc13638c4657a497c5d63a30006e1b7b9e9",
+      "packaged_sha256": "80f9d65bcf4743d6bc4f18f3fd304fc13638c4657a497c5d63a30006e1b7b9e9",
+      "byte_identical": true
+    },
+    "lf.py": {
+      "upstream_sha256": "6668b125db5ce6ab02243354465eddac021ce999cba07fd4e967c44e1a467f0c",
+      "packaged_sha256": "f50d8295eba6d6fffe59c825e54ccb650f61056230c094ffb941ac751c1cf93d",
+      "byte_identical": false,
+      "ast_identical": true
+    },
+    "mapper.py": {
+      "upstream_sha256": "95af8150242f59232a1a550daf9eeec85dc1596fabbdab11f0a6a153c5daa3b0",
+      "packaged_sha256": "f35fa1cd5970318067bb3cb23944595de2f2acc4e27719e9a7c8ecf02ba0a8ad",
+      "byte_identical": false,
+      "ast_identical": true
+    },
+    "models.py": {
+      "upstream_sha256": "c1dea8206985e6dfd47121643f9fa057aaa1439de36c8a543fd231077e17979e",
+      "packaged_sha256": "18b8ab6c04a29ceb1a886f3c83d3ae7ca7e91f37979548b61c8599e60ed8a365",
+      "byte_identical": false,
+      "ast_identical": true
+    },
+    "mpnn_helpers.py": {
+      "upstream_sha256": "8aab72494734d3bec454a779cf92d743caf6d3f0a48b6b904f09a7b038fcee6f",
+      "packaged_sha256": "1f83d4056799958925f06a76a0816576f5dc8c6123467d921bdd06a702fe6d98",
+      "byte_identical": false,
+      "ast_identical": true
+    },
+    "native/build.sh": {
+      "upstream_sha256": "3a553d90f70a4cb759928a89a53472432385b1b1b04ce5150e94fb5745fab493",
+      "packaged_sha256": "3a553d90f70a4cb759928a89a53472432385b1b1b04ce5150e94fb5745fab493",
+      "byte_identical": true
+    },
+    "native/kernel.c": {
+      "upstream_sha256": "cfc3dfa29362ba40c720b5cf98ac1886750c3b9544ad75529876cc962a3a52d7",
+      "packaged_sha256": "cfc3dfa29362ba40c720b5cf98ac1886750c3b9544ad75529876cc962a3a52d7",
+      "byte_identical": true
+    },
+    "native/kernel.so": {
+      "upstream_sha256": "b4693cf13e36021c9fcdae9d01711dcd38f1fceb45302ecf5965e9d21fad4a88",
+      "packaged_sha256": "b4693cf13e36021c9fcdae9d01711dcd38f1fceb45302ecf5965e9d21fad4a88",
+      "byte_identical": true
+    },
+    "requirements.txt": {
+      "upstream_sha256": "c0cc6119ffd77637435020f4956157ae85490e60f5e95b1b1e4d318c2eab60ca",
+      "packaged_sha256": "c0cc6119ffd77637435020f4956157ae85490e60f5e95b1b1e4d318c2eab60ca",
+      "byte_identical": true
+    },
+    "run120.py": {
+      "upstream_sha256": "36f48f3ee8278eecd9139fe43e038fbc3f92f765a10fb6291fb159eee6a88dda",
+      "packaged_sha256": "f3209f3ba8de60fbc50d0fefd28ab135d701dc2e4670d27cb9c0a845bfe780f0",
+      "byte_identical": false,
+      "ast_identical": true
+    },
+    "search.py": {
+      "upstream_sha256": "0bdc20b386bc8d4286c2394d212fe8ed1f393865989c193f263c52890b7af072",
+      "packaged_sha256": "8474a5ebebd6223319f5664fedfcc16612c8b193c1e6ec9965f405a6ed904217",
+      "byte_identical": false,
+      "ast_identical": true
+    },
+    "site.example.json": {
+      "upstream_sha256": "28041b4ef4f734356ad72e2b98c58ad9bbfc67bd06fdeceba8273e07b4ff9f0d",
+      "packaged_sha256": "28041b4ef4f734356ad72e2b98c58ad9bbfc67bd06fdeceba8273e07b4ff9f0d",
+      "byte_identical": true
+    },
+    "tests/cpu_smoke.py": {
+      "upstream_sha256": "fe34674e6b469bd52f26ef86d5a6b55b8b69d0e1d711fc6e46ca3e05b865c308",
+      "packaged_sha256": "fe34674e6b469bd52f26ef86d5a6b55b8b69d0e1d711fc6e46ca3e05b865c308",
+      "byte_identical": true,
+      "ast_identical": true
+    },
+    "tests/reference_policy.py": {
+      "upstream_sha256": "e64330b9b677db57b6289d14672a446d7e7be3f5f5196d45163fba0f3dd767fe",
+      "packaged_sha256": "e64330b9b677db57b6289d14672a446d7e7be3f5f5196d45163fba0f3dd767fe",
+      "byte_identical": true,
+      "ast_identical": true
+    },
+    "tests/test_campaign.py": {
+      "upstream_sha256": "f622d8445ed2af44c38d5263209e4c9e340131cb6cf473af9bb136cf8364cb07",
+      "packaged_sha256": "c58c5e8a831ec8747e5d9bc8ed54de90d24925e9a3d84c0c98e203d3aa723b9d",
+      "byte_identical": false,
+      "ast_identical": false
+    },
+    "tests/test_cleanup.py": {
+      "upstream_sha256": "77ed8a8b4713cd58c4f79157684e0c3337b58743bf7564d49756de4943f9aaba",
+      "packaged_sha256": "77ed8a8b4713cd58c4f79157684e0c3337b58743bf7564d49756de4943f9aaba",
+      "byte_identical": true,
+      "ast_identical": true
+    },
+    "tests/test_portable.py": {
+      "upstream_sha256": "b47256c5c344cae6712a7dee185a8cb8f29b29f015b08832fb81a5d1e82757fd",
+      "packaged_sha256": "b47256c5c344cae6712a7dee185a8cb8f29b29f015b08832fb81a5d1e82757fd",
+      "byte_identical": true,
+      "ast_identical": true
+    },
+    "vendor/__init__.py": {
+      "upstream_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "packaged_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "byte_identical": true,
+      "ast_identical": true
+    },
+    "vendor/af3/LICENSE": {
+      "upstream_sha256": "0927a01536709c20efa64834482fd4d50c9bb954353dbcf35c95a98675545470",
+      "packaged_sha256": "0927a01536709c20efa64834482fd4d50c9bb954353dbcf35c95a98675545470",
+      "byte_identical": true
+    },
+    "vendor/af3/af3_apptainer.py": {
+      "upstream_sha256": "532626b50c0bfbee7ceb2e4efd54023732e3102ba9429aa39269a8f12c82a49d",
+      "packaged_sha256": "532626b50c0bfbee7ceb2e4efd54023732e3102ba9429aa39269a8f12c82a49d",
+      "byte_identical": true,
+      "ast_identical": true
+    },
+    "vendor/af3/af3_daemon.py": {
+      "upstream_sha256": "2550e9f2c2b2e2da3a026e513a7cd43454072fe08b1f4149a59c87ae1f00a203",
+      "packaged_sha256": "2550e9f2c2b2e2da3a026e513a7cd43454072fe08b1f4149a59c87ae1f00a203",
+      "byte_identical": true,
+      "ast_identical": true
+    },
+    "vendor/af3/af3_runtime.py": {
+      "upstream_sha256": "2bdb575f5567147e0601a11b99db1fcc72b5da825e5d105e85de22f03a79acc3",
+      "packaged_sha256": "2bdb575f5567147e0601a11b99db1fcc72b5da825e5d105e85de22f03a79acc3",
+      "byte_identical": true,
+      "ast_identical": true
+    },
+    "vendor/af3/run_alphafold_batch.py": {
+      "upstream_sha256": "ef6af27eb70fb2ceca65bd81d04772eb457bc2c23609f42111cc62151557f391",
+      "packaged_sha256": "ef6af27eb70fb2ceca65bd81d04772eb457bc2c23609f42111cc62151557f391",
+      "byte_identical": true,
+      "ast_identical": true
+    },
+    "vendor/mpnn/__init__.py": {
+      "upstream_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "packaged_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "byte_identical": true,
+      "ast_identical": true
+    },
+    "vendor/mpnn/data_utils.py": {
+      "upstream_sha256": "d2a23ec60874069c693022816982441d1ce817abad7a5ed53774d7a870104165",
+      "packaged_sha256": "d2a23ec60874069c693022816982441d1ce817abad7a5ed53774d7a870104165",
+      "byte_identical": true,
+      "ast_identical": true
+    },
+    "vendor/mpnn/model_utils.py": {
+      "upstream_sha256": "c55b63d0161cb05b9f8ff1113e8f6add2daa85f9eb9c74abd5a89fa4920ce0b2",
+      "packaged_sha256": "c55b63d0161cb05b9f8ff1113e8f6add2daa85f9eb9c74abd5a89fa4920ce0b2",
+      "byte_identical": true,
+      "ast_identical": true
+    }
+  },
+  "historical_manifest": "docs/reference/PACKAGE_MANIFEST.upstream.json",
+  "evidence_scope": "Historical 2026-10-14 packaging evidence; not a claim of current scoring equivalence.",
+  "current_revision": "SCORING_REVISION.json"
+}

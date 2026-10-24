@@ -1,0 +1,86 @@
+{
+  "recorded_utc": "2026-10-06T18:36:19.074741+00:00",
+  "package_version": "1.0.0",
+  "unit_tests": {
+    "status": "passed",
+    "tests": 15,
+    "elapsed_seconds": 4.279,
+    "environment": "shared universal.sif CPU container",
+    "coverage": [
+      "input mapping and fixed positions",
+      "arbitrary chain lengths",
+      "exact cache and delta scoring in both directions",
+      "original LF proposal and population policy parity",
+      "variable-length mocked AF3 protocol"
+    ]
+  },
+  "real_cpu_integration": [
+    {
+      "passed": true,
+      "length": 117,
+      "fixed": 43,
+      "direction": "deimmunize",
+      "mpnn_single": "MTEAQIRAFLEEFYQALDNGDFETATKLFAKDVKIKLWDGVEFTSPEQFKAWFTGLFKVSENAKRTILKLDVDGNTVVVEVHLSAIINGKPIDVVLRHTWTFEDGLVKSVVVEIVDE",
+      "mpnn_joint": "MTPEEIRAFLEEFYQALDNGDFETATKLFAKDVKIKLWDGVEFTSPEQFKAWFTGLFKVSENAKRTILKLDVDGNTVVVEVHLSAIINGKPIDVVLRHTWTFEDGLVKSVVVEIVDE",
+      "mpnn_fresh": "MSEEEIKQFLQLFYDALDPGDFKTATKLFAPDVEIELWNGVKFHSPEEFIAWFEELFAHSEGARRTILALYVDGDQVTVLVRLDAVYRGVPVSVVLRHRWNFKDGKVKSVKVDIPED",
+      "exact_stock_fast_pairs": 100,
+      "native_accelerated": true,
+      "cold_cache_and_reuse_verified": true,
+      "cpu_seconds": 10.202476,
+      "torch": "2.11.0+cu130",
+      "numpy": "2.0.2",
+      "prody": "2.6.1",
+      "biopython": "1.85",
+      "limitation": "CPU integration only; real GPU folding is not exercised by this test."
+    },
+    {
+      "passed": true,
+      "length": 23,
+      "fixed": 2,
+      "direction": "immunize",
+      "mpnn_single": "MTEAQIRAFLEEFYQALDNGDFE",
+      "mpnn_joint": "MTEEEIRAFLEEFYQALDNGDFE",
+      "mpnn_fresh": "MTPEQIKEAQYRRRRNLQEGRYD",
+      "exact_stock_fast_pairs": 100,
+      "native_accelerated": true,
+      "cold_cache_and_reuse_verified": true,
+      "cpu_seconds": 8.789956,
+      "torch": "2.11.0+cu130",
+      "numpy": "2.0.2",
+      "prody": "2.6.1",
+      "biopython": "1.85",
+      "limitation": "CPU integration only; real GPU folding is not exercised by this test."
+    }
+  ],
+  "relocation": {
+    "preparation": "passed",
+    "submission_dry_run": "passed; command points to relocated package",
+    "mapping_checks": "passed: 117 residues/43 fixed and 23 residues/2 fixed",
+    "full_unit_suite_rerun": "not completed: Apptainer runtime/cgo pthread_create failed before Python startup; retry with GOMAXPROCS=2 had same system resource error"
+  },
+  "syntax": {
+    "python_files": 18,
+    "python_ast": "passed",
+    "shell_scripts": [
+      "job.sh",
+      "native/build.sh"
+    ],
+    "bash_n": "passed"
+  },
+  "gpu_integration": {
+    "executed": false,
+    "explanation": "Vendored AF3 wrappers and variable-length protocol tested; no real GPU fold rerun for packaging."
+  },
+  "packaging_slurm_jobs_submitted": 0,
+  "original_code_modified": false,
+  "shared_dependency_versions": {
+    "python": "3.11.11",
+    "torch": "2.11.0+cu130",
+    "numpy": "2.0.2",
+    "prody": "2.6.1",
+    "biopython": "1.85",
+    "matplotlib": "3.9.2"
+  },
+  "checkpoint_sha256": "c9cb4a671d79604111231f8dbfc7c590e06f1197453b7a6854ac6661a642f5bd",
+  "native_kernel_sha256": "b4693cf13e36021c9fcdae9d01711dcd38f1fceb45302ecf5965e9d21fad4a88"
+}

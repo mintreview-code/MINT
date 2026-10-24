@@ -1,0 +1,104 @@
+{
+  "date": "2026-10-18",
+  "authorized_changes": [
+    "Eight-threshold cumulative rank-count objective from Digs",
+    "Joint proposal temperature 0.4 for every 2/4/8-site attempt"
+  ],
+  "remote_source": "/home/mwitwer/projects/MHC_project/peptide_scan_investigation/lf_shared8x5_weighted300_p95_r1_20261016/package",
+  "source_sha256": {
+    "objective.py": "dfa2591a3fca2685795219558372acfec3be5e6d9ab9de1f26c013609766bb1a",
+    "core.py": "a5577916149716a4005d002e6f5d8d3ea4c56d6d035597079090ce4d6310f8ee",
+    "search.py": "4c2e832f8ec98246b9a3245582a50aaf17fe2f490f208b0082628faab794f74a",
+    "lf.py": "9510c0f43d4ab4701fa2d119a11c9ff42f520a98dd31dd38034ab9d551815bf9",
+    "run120.py": "04700980e3ad270aa13d56235516b0fe7c249a7cad8871c9d91474ee4212d0a1"
+  },
+  "adopted_core_functions_ast_identical": {
+    "key": true,
+    "select": true,
+    "metric": true,
+    "Mapper.screen2": true
+  },
+  "objective_helper_byte_identical": false,
+  "temperature_note": "Inspected active campaign preparation still specifies [0.4,0.7,1.0]. Local [0.4] is explicitly requested by user, not claimed as a verified active-Digs setting.",
+  "unchanged": [
+    "AF3 implementation and 90/2 root-reference gates",
+    "MPNN weights and pair marginal temperature 1.0",
+    "120-round preset",
+    "43 fixed residues",
+    "2% worsening fraction and 10% diversity slack",
+    "Population sizes and proposal counts",
+    "NetMHCpan rank cache and predictor implementation"
+  ],
+  "historical_evidence": [
+    "PORTING.json",
+    "readability-check.json",
+    "../SOURCE_PROVENANCE.json",
+    "../VALIDATION.json"
+  ],
+  "compatibility": "New runs required. Do not modify source fingerprints in existing prepared runs to force resume.",
+  "validation": {
+    "status": "passed",
+    "unit_tests": 52,
+    "seconds": 27.46,
+    "delta_full_scan_comparisons": 1920,
+    "strict_threshold_boundaries": true,
+    "repeated_window_multiplicity": true,
+    "original_broad2_policy_parity": true,
+    "eight_joint_calls_at_temperature_point_four": true,
+    "weighted_endpoint_and_cleanup_checks": true,
+    "independent_audit_and_report_export": true,
+    "python_syntax": "all files parsed",
+    "real_netmhcpan": false,
+    "real_mpnn": false,
+    "real_af3": false,
+    "notes": "Synthetic predictor and MPNN fixtures; AF3 and plotting mocked. Archive tests explicitly model free space, retaining a separate insufficient-space case; production headroom protection unchanged."
+  },
+  "objective_helper_ast_identical": true,
+  "changed_files": [
+    "AGENTS.md",
+    "PACKAGE_MANIFEST.json",
+    "README.md",
+    "app.py",
+    "archive_results.py",
+    "core.py",
+    "docs/PORTING.json",
+    "docs/SCORING_REVISION.json",
+    "docs/TESTING.md",
+    "docs/WORKFLOW.md",
+    "docs/readability-check.json",
+    "lf.py",
+    "objective.py",
+    "prepare.py",
+    "run120.py",
+    "search.py",
+    "tests/test_campaign.py",
+    "tests/test_cleanup.py",
+    "tests/test_packaging.py",
+    "tests/test_portable.py",
+    "tests/test_weighted.py",
+    "tools/release.py"
+  ],
+  "follow_up_revisions": [
+    {
+      "date": "2026-10-23",
+      "authorization": "User requested correcting the threshold-bucket interpretation only, with no other algorithm changes.",
+      "change": "Allele processing order uses each parent allele contribution to the selected objective: sum of eight cumulative threshold counts in weighted8; <2% count in broad2. Alphabetical tie breaking retained.",
+      "scope": "Only Mapper.screen2 allele ordering changed. Objective values, screening bounds, thresholds, proposal generation, fold gates, temperatures and budgets are unchanged.",
+      "remote_verification": "No Digs source inspected or changed for this local revision.",
+      "historical_evidence": "All earlier source hashes and AST-equivalence evidence above describe the 2026-10-18 revision and are preserved.",
+      "core_sha256_before": "9cab04bc629db0c86668caf90ddcb43f04967f9812d2a7ddd919f9769f932942",
+      "core_sha256_after": "66eb63837c4926013fdeb3fd03883897f78dad14341309d95a694a45f82ecf45",
+      "validation": {
+        "status": "passed",
+        "unit_tests": 53,
+        "seconds": 28.422,
+        "regression_failed_before_fix": true,
+        "allele_order_both_modes_and_directions": true,
+        "delta_full_scan_comparisons": 1920,
+        "real_netmhcpan": false,
+        "real_mpnn": false,
+        "real_af3": false
+      }
+    }
+  ]
+}

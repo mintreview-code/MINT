@@ -1,0 +1,52 @@
+"""Prepare forty paired LF runs on scratch, without submitting jobs."""
+from pathlib import Path
+import argparse
+import hashlib
+import json
+import sys
+BASE=Path(__file__).resolve().parent
+sys.path.insert(0,str(BASE/'package'))
+import lf
+
+def main():
+    plan=lf.read(BASE/'lineages.proposed.json')
+    assert len(plan['lineages'])==40
+    site=lf.site_settings()
+    site.update(cpu_container='/home/mwitwer/projects/MHC_project/human_alleles/container_used/vep_fold_sandbox',
+                constraint='A4000',cpus=8,memory='30G',time_limit='48:00:00')
+    lf.check_site(site);lf.save(BASE/'site.json',site)
+    entries=[]
+    for row in plan['lineages']:
+        out=Path(row['scratch_directory'])
+        args=argparse.Namespace(out=out,pdb=Path(row['pdb']),chain='A',site_config=BASE/'site.json',
+              direction=row['direction'],fixed='',fixed_file=None,fixed_indices=','.join(map(str,row['fixed_positions'])),
+              alleles_file=Path(row['alleles_file']),seed=row['seed'],rounds=120,search_hours=42,
+              initial_designs=512,initial_folds=96,folds_per_round=48,beam=24,native_mode='required',smoke=False,
+              cleanup_scratch_on_success=True,scratch_root=Path(row['scratch_root']),archive_dir=Path(row['archive_directory']))
+        lf.initialize(args)
+        config=lf.read(out/'config.json')
+        config.update(initial_temperatures=[.4],immigrant_temperatures=[.4],temperatures=[.4,.7,1.],allocation_search_hours=42,
+                      lineage_id=row['lineage_id'],paired_seed=row['seed'],experiment=str(BASE))
+        lf.save(out/'config.json',config)
+        entries.append(dict(index=len(entries),lineage_id=row['lineage_id'],direction=row['direction'],
+              input_pdb=Path(row['pdb']).name,run=str(out),archive=row['archive_directory'],seed=row['seed'],
+              config_sha256=lf.mapper.digest(out/'config.json')))
+    # Two small real-model tests share one GPU allocation; production caches
+    # remain untouched. Enriched seed2 is already validated by previous LF.
+    smokes=[]
+    for direction in ('deimmunize','immunize'):
+        out=BASE/'validation'/('smoke_'+direction)
+        args=argparse.Namespace(out=out,pdb=BASE/'inputs/2.pdb',chain='A',site_config=BASE/'site.json',
+              direction=direction,fixed='',fixed_file=None,fixed_indices=','.join(map(str,plan['lineages'][0]['fixed_positions'])),
+              alleles_file=BASE/'package/assets/alleles25.json',seed=202610071,rounds=1,search_hours=1.5,
+              initial_designs=4,initial_folds=5,folds_per_round=2,beam=2,native_mode='required',smoke=True,
+              cleanup_scratch_on_success=False,scratch_root=None,archive_dir=None)
+        lf.initialize(args);config=lf.read(out/'config.json')
+        config.update(initial_temperatures=[.4],immigrant_temperatures=[.4],allocation_search_hours=1.5)
+        lf.save(out/'config.json',config);smokes.append(str(out))
+    lf.save(BASE/'lineages.json',dict(status='AUTHORIZED_PREPARED',lineages=entries,smokes=smokes,
+       max_gpu=40,max_cpu=320,source_hashes={str(p.relative_to(BASE)):lf.mapper.digest(p) for pattern in ('*.py','*.sh') for p in BASE.glob(pattern)},
+       package_hashes=lf.protected_sources()))
+    print('Prepared 40 production lineages and two independent smoke runs; no jobs submitted.')
+
+if __name__=='__main__':main()

@@ -1,0 +1,14 @@
+{
+  "cpu_container": "/net/software/containers/universal.sif",
+  "cpu_python": "",
+  "netmhcpan": "/net/software/netmhcpan/netMHCpan-4.1",
+  "af3_image": "/projects/ml/rfd4-proteina/latent_data/af3/apptainer_images/af3-open-2026-08-19.sif",
+  "af3_model_dir": "/net/databases/alphafold/",
+  "partition": "gpu",
+  "gres": "gpu:small:1",
+  "constraint": "",
+  "account": "",
+  "cpus": 8,
+  "memory": "30G",
+  "time_limit": "48:00:00"
+}

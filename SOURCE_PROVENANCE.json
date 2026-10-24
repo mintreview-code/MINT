@@ -1,0 +1,104 @@
+{
+  "description": "Vendored source provenance; runtime never reads source locations.",
+  "files": [
+    {
+      "source": "peptide_scan_investigation/luxsit_fresh_search/core.py",
+      "destination": "core.py",
+      "source_sha256": "929523ae02a7a8af2642e3d6d9919fcc2d7aee0b64e46abaa77342425e0464c0"
+    },
+    {
+      "source": "peptide_scan_investigation/luxsit_fresh_search/search.py",
+      "destination": "search.py",
+      "source_sha256": "ed84509ca1b609c3a006800f899c2fcd933682ba6a8a67ee33c624887979c0d9"
+    },
+    {
+      "source": "peptide_scan_investigation/luxsit_fresh_search/models.py",
+      "destination": "models.py",
+      "source_sha256": "90d5643ab8cd9f3f8c429508c66ec2fe4f049d3ed46e3ccd2f6642bfce62e2ca"
+    },
+    {
+      "source": "immuno_mpnn_prior/model_utils.py",
+      "destination": "vendor/mpnn/model_utils.py",
+      "source_sha256": "c55b63d0161cb05b9f8ff1113e8f6add2daa85f9eb9c74abd5a89fa4920ce0b2"
+    },
+    {
+      "source": "immuno_mpnn_prior/data_utils.py",
+      "destination": "vendor/mpnn/data_utils.py",
+      "source_sha256": "d2a23ec60874069c693022816982441d1ce817abad7a5ed53774d7a870104165"
+    },
+    {
+      "source": "immuno_mpnn/CapsNetMHC/IEDB_codes/model_weights/vanillaMPNN_v_48_020.pt",
+      "destination": "assets/protein_mpnn.pt",
+      "source_sha256": "c9cb4a671d79604111231f8dbfc7c590e06f1197453b7a6854ac6661a642f5bd"
+    },
+    {
+      "source": "peptide_scan_investigation/native_acceleration/kernel.c",
+      "destination": "native/kernel.c",
+      "source_sha256": "cfc3dfa29362ba40c720b5cf98ac1886750c3b9544ad75529876cc962a3a52d7"
+    },
+    {
+      "source": "peptide_scan_investigation/peptide_map_search/kernel.so",
+      "destination": "native/kernel.so",
+      "source_sha256": "b4693cf13e36021c9fcdae9d01711dcd38f1fceb45302ecf5965e9d21fad4a88"
+    },
+    {
+      "source": "rfd4-proteina/v0.0.2/src/rfproteina/af3/af3_daemon.py",
+      "destination": "vendor/af3/af3_daemon.py",
+      "source_sha256": "2550e9f2c2b2e2da3a026e513a7cd43454072fe08b1f4149a59c87ae1f00a203"
+    },
+    {
+      "source": "rfd4-proteina/v0.0.2/src/rfproteina/af3/af3_apptainer.py",
+      "destination": "vendor/af3/af3_apptainer.py",
+      "source_sha256": "532626b50c0bfbee7ceb2e4efd54023732e3102ba9429aa39269a8f12c82a49d"
+    },
+    {
+      "source": "rfd4-proteina/v0.0.2/src/rfproteina/af3/run_alphafold_batch.py",
+      "destination": "vendor/af3/run_alphafold_batch.py",
+      "source_sha256": "ef6af27eb70fb2ceca65bd81d04772eb457bc2c23609f42111cc62151557f391"
+    },
+    {
+      "source": "rfd4-proteina/v0.0.2/src/rfproteina/af3/af3_runtime.py",
+      "destination": "vendor/af3/af3_runtime.py",
+      "source_sha256": "2bdb575f5567147e0601a11b99db1fcc72b5da825e5d105e85de22f03a79acc3"
+    },
+    {
+      "source": "rfd4-proteina/v0.0.2/LICENSE",
+      "destination": "vendor/af3/LICENSE",
+      "source_sha256": "0927a01536709c20efa64834482fd4d50c9bb954353dbcf35c95a98675545470"
+    },
+    {
+      "source": "human_alleles/diverse_plddt_enriched_start/2.pdb",
+      "destination": "examples/luxsit_seed.pdb",
+      "source_sha256": "a7353b506bbb8402517468d298734cfa8c8b93d389fb6321161e5d15dd026bdf"
+    }
+  ],
+  "extractions": [
+    {
+      "source": "human_alleles/greedy_lookback/py/greedy_deimmunize.py",
+      "source_sha256": "200e632d0c65af5ea6a40e7107295a646557bb1ac42544b7d812ef693228053d",
+      "destination": "mpnn_helpers.py",
+      "functions": [
+        "build_model",
+        "setup_protein",
+        "base_feature_common"
+      ],
+      "changes": "Local vendored imports; unused oracle imports removed."
+    },
+    {
+      "sources": [
+        "peptide_scan_investigation/luxsit_fresh_search/core.py",
+        "peptide_scan_investigation/luxsit_fresh_search/search.py"
+      ],
+      "destination": "tests/reference_policy.py",
+      "purpose": "Frozen LF policy excerpts for parity tests."
+    }
+  ],
+  "portability_changes": [
+    "Local imports and bundled MPNN checkpoint and native kernel.",
+    "Configurable shared software paths and Slurm resources; no original account runtime dependency.",
+    "Explicit PDB chain selection, normalized residue mapping, configurable fixed positions and variable sequence length.",
+    "Both original LF direction policies retained; peptide cache starts empty for new runs."
+  ],
+  "lf_configuration_source": "peptide_scan_investigation/luxsit_fresh_search/runs/deimmunize_seed2_25_v1/config.json",
+  "lf_configuration_sha256": "3225cef19b58e6e5adda4616f766bf2b98c8ffef4ec996081b6919e10dee2475"
+}

@@ -1,0 +1,14 @@
+{
+  "cpu_container": "",
+  "cpu_python": "/absolute/path/to/cpu-env/bin/python",
+  "netmhcpan": "/absolute/path/to/netMHCpan-4.1",
+  "af3_image": "/absolute/path/to/compatible-af3.sif",
+  "af3_model_dir": "/absolute/path/to/af3-parameters",
+  "partition": "gpu",
+  "gres": "gpu:1",
+  "constraint": "",
+  "account": "",
+  "cpus": 8,
+  "memory": "30G",
+  "time_limit": "48:00:00"
+}

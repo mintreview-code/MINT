@@ -1,0 +1,27 @@
+This package contains project code copied from the existing LF search and
+the immuno_mpnn_prior model/data helpers, plus the original project MPNN
+checkpoint. Source identities and checksums are in SOURCE_PROVENANCE.json.
+No new license is asserted for those original components or model weights;
+retain their original terms when redistributing beyond the intended project.
+
+The RFProteina AF3 wrapper files are copied from rfd4-proteina/v0.0.2.
+Its BSD 3-Clause notice is retained at vendor/af3/LICENSE.
+vendor/af3/af3_runtime.py retains its original DeepMind copyright and
+Apache-2.0 header and attribution to the upstream inference implementation.
+
+NetMHCpan, AF3 parameters, and cluster container images are external
+dependencies and are not redistributed in this package. Use installations
+and parameter access available to your own cluster account.
+
+The external AlphaFold 3 engine used by the compatible image is
+kierandidi/alphafold3 commit 8d3601151d5bf7525d8591583915d2a8471442a5.
+Its source is not bundled. Exact engine and container-build provenance are in
+runtime/af3/PROVENANCE.json. The inspected container recipe is included; the
+container is not. The Apache-2.0 text for the included inference adaptation is
+retained at vendor/af3/Apache-2.0.txt. External engine, model parameters, and
+outputs retain their original terms; see the linked upstream instructions.
+
+The readability edits and new preparation, UI, testing, and packaging helpers
+do not replace the original component licenses or assert a blanket license
+over the package. Gradio and other installed Python dependencies retain their
+own licenses and are installed separately.

@@ -1,0 +1,7 @@
+# For an optional native CPU environment. The default shared DIGS container
+# already supplies these; AF3 runs in its separately configured container.
+numpy>=1.23,<3
+torch>=2.0
+ProDy>=2.4
+biopython>=1.80
+matplotlib>=3.7

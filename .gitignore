@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.local/
+.pytest_cache/
+runs/
+dist/
+site.local.json
+*.sif
+*.sqlite*
+*.tar
+*.tar.gz
+*.zip

@@ -1,0 +1,139 @@
+{
+  "package": "lf_portable",
+  "version": "1.0.0",
+  "files": {
+    "README.md": {
+      "sha256": "958b0b10a644a90337d519a7ff4fbc4892b1fb5480c63828d63ed5ea7c0c62a1",
+      "bytes": 11764
+    },
+    "SOURCE_PROVENANCE.json": {
+      "sha256": "2b4738850da9964ad812a861ed19db5c4550b3f4a0dedd4c602d10a76e80174f",
+      "bytes": 4514
+    },
+    "THIRD_PARTY_NOTICES.txt": {
+      "sha256": "c66f70c21f9f525926d7e7d7ff88c86c1b2375f663b5222653d6e8790b2447c5",
+      "bytes": 855
+    },
+    "VALIDATION.json": {
+      "sha256": "cfe13eea3044c064264ebab3a01da3e99917d18aba2d2e03f943796f5fd845f3",
+      "bytes": 3152
+    },
+    "assets/alleles25.json": {
+      "sha256": "cc63ba1b5419619f326de6ab412b376f9ed66850fa5b0fa581f5e3321b1b53bf",
+      "bytes": 403
+    },
+    "assets/protein_mpnn.pt": {
+      "sha256": "c9cb4a671d79604111231f8dbfc7c590e06f1197453b7a6854ac6661a642f5bd",
+      "bytes": 6681301
+    },
+    "core.py": {
+      "sha256": "8e33379db7f1f515381dc002ab418968d47d4cd743af3ee4fbdefd636c75a413",
+      "bytes": 11831
+    },
+    "examples/luxsit_fixed.txt": {
+      "sha256": "c5b4bf28e76a570514394ce2cc63a18b88a3cdeef5dcc970ec366f0176d07df7",
+      "bytes": 175
+    },
+    "examples/luxsit_seed.pdb": {
+      "sha256": "a7353b506bbb8402517468d298734cfa8c8b93d389fb6321161e5d15dd026bdf",
+      "bytes": 153252
+    },
+    "geometry.py": {
+      "sha256": "a8a6f235bddca31b2a90dfc488b6b2bd71ba4deed9eb0881666df95a011c51bc",
+      "bytes": 6273
+    },
+    "job.sh": {
+      "sha256": "8c23e4ccbe1f3a23ba8caa46cd5b87acabd94462bd5c6b0a72cf06ce073ede51",
+      "bytes": 3794
+    },
+    "lf.py": {
+      "sha256": "e9e8d2357c470639120dc4ea6dd19ac24f40a5a426728c39d4e4630a3935708f",
+      "bytes": 8932
+    },
+    "mapper.py": {
+      "sha256": "95af8150242f59232a1a550daf9eeec85dc1596fabbdab11f0a6a153c5daa3b0",
+      "bytes": 5184
+    },
+    "models.py": {
+      "sha256": "c1dea8206985e6dfd47121643f9fa057aaa1439de36c8a543fd231077e17979e",
+      "bytes": 7745
+    },
+    "mpnn_helpers.py": {
+      "sha256": "8aab72494734d3bec454a779cf92d743caf6d3f0a48b6b904f09a7b038fcee6f",
+      "bytes": 3982
+    },
+    "native/build.sh": {
+      "sha256": "3a553d90f70a4cb759928a89a53472432385b1b1b04ce5150e94fb5745fab493",
+      "bytes": 361
+    },
+    "native/kernel.c": {
+      "sha256": "cfc3dfa29362ba40c720b5cf98ac1886750c3b9544ad75529876cc962a3a52d7",
+      "bytes": 5856
+    },
+    "native/kernel.so": {
+      "sha256": "b4693cf13e36021c9fcdae9d01711dcd38f1fceb45302ecf5965e9d21fad4a88",
+      "bytes": 20896
+    },
+    "requirements.txt": {
+      "sha256": "c0cc6119ffd77637435020f4956157ae85490e60f5e95b1b1e4d318c2eab60ca",
+      "bytes": 220
+    },
+    "search.py": {
+      "sha256": "1e54e1873094b88bfbd0d15fa4904a025949e87fe79234795a6e5f16a119f3f9",
+      "bytes": 17709
+    },
+    "site.example.json": {
+      "sha256": "28041b4ef4f734356ad72e2b98c58ad9bbfc67bd06fdeceba8273e07b4ff9f0d",
+      "bytes": 434
+    },
+    "tests/cpu_smoke.py": {
+      "sha256": "fe34674e6b469bd52f26ef86d5a6b55b8b69d0e1d711fc6e46ca3e05b865c308",
+      "bytes": 2327
+    },
+    "tests/reference_policy.py": {
+      "sha256": "e64330b9b677db57b6289d14672a446d7e7be3f5f5196d45163fba0f3dd767fe",
+      "bytes": 7715
+    },
+    "tests/test_portable.py": {
+      "sha256": "b47256c5c344cae6712a7dee185a8cb8f29b29f015b08832fb81a5d1e82757fd",
+      "bytes": 8870
+    },
+    "vendor/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "vendor/af3/LICENSE": {
+      "sha256": "0927a01536709c20efa64834482fd4d50c9bb954353dbcf35c95a98675545470",
+      "bytes": 1533
+    },
+    "vendor/af3/af3_apptainer.py": {
+      "sha256": "532626b50c0bfbee7ceb2e4efd54023732e3102ba9429aa39269a8f12c82a49d",
+      "bytes": 6122
+    },
+    "vendor/af3/af3_daemon.py": {
+      "sha256": "2550e9f2c2b2e2da3a026e513a7cd43454072fe08b1f4149a59c87ae1f00a203",
+      "bytes": 18008
+    },
+    "vendor/af3/af3_runtime.py": {
+      "sha256": "2bdb575f5567147e0601a11b99db1fcc72b5da825e5d105e85de22f03a79acc3",
+      "bytes": 14735
+    },
+    "vendor/af3/run_alphafold_batch.py": {
+      "sha256": "ef6af27eb70fb2ceca65bd81d04772eb457bc2c23609f42111cc62151557f391",
+      "bytes": 13401
+    },
+    "vendor/mpnn/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "vendor/mpnn/data_utils.py": {
+      "sha256": "d2a23ec60874069c693022816982441d1ce817abad7a5ed53774d7a870104165",
+      "bytes": 22423
+    },
+    "vendor/mpnn/model_utils.py": {
+      "sha256": "c55b63d0161cb05b9f8ff1113e8f6add2daa85f9eb9c74abd5a89fa4920ce0b2",
+      "bytes": 98124
+    }
+  },
+  "excluded": "Local .validation, run outputs, caches, archive and manifest itself"
+}

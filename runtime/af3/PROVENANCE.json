@@ -1,0 +1,47 @@
+{
+  "inspected_image": "/projects/ml/rfd4-proteina/latent_data/af3/apptainer_images/af3-open-2026-08-19.sif",
+  "image_bytes": 3909484544,
+  "image_sha256": null,
+  "inspection": "Read-only apptainer inspect --deffile and --labels over SSH; image not launched or copied.",
+  "inspection_date": "2026-10-14",
+  "runtime_repository": "https://github.com/kierandidi/alphafold3",
+  "runtime_commit": "8d3601151d5bf7525d8591583915d2a8471442a5",
+  "runtime_git_tree": "2a9519466827eebc451a262aa7fc39e9da994805",
+  "commit_url": "https://github.com/kierandidi/alphafold3/commit/8d3601151d5bf7525d8591583915d2a8471442a5",
+  "commit_verified_by": "GitHub public commits API",
+  "container_base_digest": "sha256:c87e78933f4c16e3272123bf2f75537306596d0fbaa395a29696a22786e5ee0e",
+  "recipe_files": {
+    "af3-open-2026-08-19.def": "de1cb3c6483c89876cd2c2a53dd217fe02e221e64f03c22fee4a657d00a8e7d8",
+    "af3-open-2026-08-19.labels.txt": "fa291ca8d0e009abf92f3ee0e5cf76c5db249f4df9a5d93419371cdb23d554de"
+  },
+  "limitations": [
+    "No container rebuild or GPU inference was run during local packaging.",
+    "Image bytes and labels were inspected; complete image SHA256 was not computed.",
+    "The source checkout recipe points to older commit 36fad169902c52b6a9f245cfa8f2b2d2406409cf; use the inspected recipe to reproduce the selected engine commit.",
+    "The older shared artifacts/af3-open.manifest.json describes a different image; it is not used as provenance for this dated image.",
+    "The exact recipe retains a base image tag and live package/data downloads; it is not a guarantee of bit-for-bit image reproduction."
+  ],
+  "engine_source_included": false,
+  "engine_installation": "The supplied inspected Apptainer recipe downloads the pinned upstream source and installs it during the external runtime build.",
+  "source_inspection": {
+    "purpose": "Verify the exact image-pinned source revision, required fork APIs, dependencies, and license without bundling the engine.",
+    "source_archive_url": "https://codeload.github.com/kierandidi/alphafold3/tar.gz/8d3601151d5bf7525d8591583915d2a8471442a5",
+    "source_archive_sha256": "1979c8345fc6644dbd32ade70bcad894df33eeb7702e23c6b9bf7e94cf4af9a5",
+    "source_archive_bytes": 5987941,
+    "archive_file_count": 209,
+    "expanded_bytes": 21254409,
+    "license": "Apache-2.0, with separate model parameter and output terms retained upstream.",
+    "model_weights_downloaded": false,
+    "required_apis_verified": [
+      "featurise_input.fix_standalone_glycans",
+      "featurise_input.of3_weights"
+    ],
+    "dependency_versions_verified": {
+      "python": ">=3.12",
+      "jax": "0.10.2",
+      "dm-haiku": "0.0.16",
+      "rdkit": "2025.9.4",
+      "tokamax": "0.0.12"
+    }
+  }
+}

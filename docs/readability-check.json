@@ -1,0 +1,82 @@
+{
+  "formatter": "Black 24.4.2",
+  "line_length": 88,
+  "changes": "Formatting and explanatory comments only.",
+  "validation": "Parsed Python ASTs are identical with source location attributes excluded. All files compile. This check does not run scientific inference.",
+  "all_ast_identical": true,
+  "files": [
+    {
+      "file": "core.py",
+      "upstream_sha256": "76660972d7360061f3f9e23053040fcb2e4a2119fce6f90dd160a52ce8b46d8c",
+      "packaged_sha256": "b67aa03f8b35774f26b2fab2512537fa3cb5fe4668fd3207fb89beceea1e95c5",
+      "ast_sha256": "87157ae82f1c88251527d4d8bf2c461c57c9f709c81a0aef53afbc8a036c1240",
+      "ast_identical": true,
+      "upstream_lines": 214,
+      "packaged_lines": 397
+    },
+    {
+      "file": "mapper.py",
+      "upstream_sha256": "95af8150242f59232a1a550daf9eeec85dc1596fabbdab11f0a6a153c5daa3b0",
+      "packaged_sha256": "f35fa1cd5970318067bb3cb23944595de2f2acc4e27719e9a7c8ecf02ba0a8ad",
+      "ast_sha256": "7083bd2afda8895d045fe98751838ed31e5a842968da2268e8356c09dcc013b6",
+      "ast_identical": true,
+      "upstream_lines": 92,
+      "packaged_lines": 187
+    },
+    {
+      "file": "search.py",
+      "upstream_sha256": "0bdc20b386bc8d4286c2394d212fe8ed1f393865989c193f263c52890b7af072",
+      "packaged_sha256": "8474a5ebebd6223319f5664fedfcc16612c8b193c1e6ec9965f405a6ed904217",
+      "ast_sha256": "4f80e1f61e5802ee7800e37fc61d3e0369236d6758817717b5cecaedf0292c2b",
+      "ast_identical": true,
+      "upstream_lines": 249,
+      "packaged_lines": 612
+    },
+    {
+      "file": "models.py",
+      "upstream_sha256": "c1dea8206985e6dfd47121643f9fa057aaa1439de36c8a543fd231077e17979e",
+      "packaged_sha256": "18b8ab6c04a29ceb1a886f3c83d3ae7ca7e91f37979548b61c8599e60ed8a365",
+      "ast_sha256": "9c9c5286c087b59ad5f939b61dcb1f295852270c37440fac65d1e381483d6091",
+      "ast_identical": true,
+      "upstream_lines": 124,
+      "packaged_lines": 237
+    },
+    {
+      "file": "geometry.py",
+      "upstream_sha256": "a8a6f235bddca31b2a90dfc488b6b2bd71ba4deed9eb0881666df95a011c51bc",
+      "packaged_sha256": "00b833ff85cfbd2264b499c16b466b8ebf767e36ebe6ed51e8ec9463264792bc",
+      "ast_sha256": "240c01fdc9d270cae2ef472547db90b24b0d6f51f07fac7d5b71a952ed3cd227",
+      "ast_identical": true,
+      "upstream_lines": 114,
+      "packaged_lines": 212
+    },
+    {
+      "file": "mpnn_helpers.py",
+      "upstream_sha256": "8aab72494734d3bec454a779cf92d743caf6d3f0a48b6b904f09a7b038fcee6f",
+      "packaged_sha256": "1f83d4056799958925f06a76a0816576f5dc8c6123467d921bdd06a702fe6d98",
+      "ast_sha256": "51d64f6cbe11ce6795a4dfc10450fb87b4529866ac7f191241b39624555ee83b",
+      "ast_identical": true,
+      "upstream_lines": 79,
+      "packaged_lines": 102
+    },
+    {
+      "file": "run120.py",
+      "upstream_sha256": "36f48f3ee8278eecd9139fe43e038fbc3f92f765a10fb6291fb159eee6a88dda",
+      "packaged_sha256": "f3209f3ba8de60fbc50d0fefd28ab135d701dc2e4670d27cb9c0a845bfe780f0",
+      "ast_sha256": "ee995e42f22c5d5f42316a23a2acfa4502b3758af2953454d0cebe783a019a18",
+      "ast_identical": true,
+      "upstream_lines": 104,
+      "packaged_lines": 173
+    },
+    {
+      "file": "archive_results.py",
+      "upstream_sha256": "0c17a4a5eaa7c09a40fde9e252c44a4b111224e9272d76061df1638b2fc59978",
+      "packaged_sha256": "3e5228fb9dbf636cb9efc47fba62a88e1a486a72cbfd2f11c81677af73b430cb",
+      "ast_sha256": "94007afc54b7ff5b364629e53f9947f117a92650eb22381950e4a40aa73fc623",
+      "ast_identical": true,
+      "upstream_lines": 171,
+      "packaged_lines": 259
+    }
+  ],
+  "evidence_scope": "Historical 2026-10-14 formatting check. Revised scoring files are described in SCORING_REVISION.json."
+}
