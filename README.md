@@ -15,9 +15,7 @@ MINT (MHC-I Immunogenicity Tuning) is a computational framework for redesigning 
 NetMHCpan's licensed installation/data, AF3 model parameters, prebuilt container
 images, the upstream AF3 engine, and historical run caches are **external**.
 Obtain access under their respective terms. This backend requires Linux x86-64,
-Apptainer, and an NVIDIA GPU. See
-[AF3 setup and compatibility](docs/AF3.md) and [third-party notices](THIRD_PARTY_NOTICES.txt).
-
+Apptainer, and an NVIDIA GPU.
 ## Start here
 
 | Goal | Read or run |
